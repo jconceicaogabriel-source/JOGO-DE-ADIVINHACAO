@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogo de Adivinhação</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="container">
+    <div class="header">
+      <div class="tag">M6 — JavaScript</div>
+      <h1>JOGO DE<br><span>ADIVINHAÇÃO</span></h1>
+      <p class="subtitle">Um número secreto entre 1 e 100 foi gerado.<br>Você tem 10 tentativas para descobri-lo.</p>
+    </div>
+
+    <div class="card">
+      <div class="attempts-section">
+        <div class="attempts-label">
+          <span>Tentativas restantes</span>
+          <span id="attempts-count">10</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" id="bar-fill"></div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="number"
+          id="guess-input"
+          min="1"
+          max="100"
+          placeholder="1 – 100"
+          autocomplete="off"
+        />
+        <button class="btn" id="guess-btn" onclick="makeGuess()">Chutar</button>
+      </div>
+
+      <div class="message-box" id="message-box">
+        <p id="message">Digite um número e clique em Chutar para começar.</p>
+      </div>
+
+      <div class="history-label">Palpites anteriores</div>
+      <div class="history-list" id="history-list"></div>
+
+      <button id="restart-btn" onclick="restartGame()">↺ &nbsp; Jogar novamente</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
